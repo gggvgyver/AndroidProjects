@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#001F1C1C"
+    tools:context=".BlackJackActivity">
+
+<!--    <Button-->
+<!--        android:id="@+id/hitbutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="72dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:onClick="hitClick"-->
+<!--        android:text="@string/button_hit"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/userlayout"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/holdbutton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="76dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:onClick="holdClick"-->
+<!--        android:text="@string/button_hold"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/userlayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <LinearLayout
+        android:id="@+id/cardlayout"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/userlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dealerLayout"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:text="Dealer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Player"
+        app:layout_constraintBottom_toTopOf="@+id/cardlayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/restartbutton"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="100dp"-->
+<!--        android:layout_marginEnd="100dp"-->
+<!--        android:layout_marginBottom="56dp"-->
+<!--        android:onClick="restartClick"-->
+<!--        android:text="재시작"-->
+<!--        android:visibility="invisible"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/cardlayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <TextView
+        android:id="@+id/playervaluetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardlayout"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/dealervaluetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/dealerLayout"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/finaltext"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealerLayout" />
+
+    <LinearLayout
+        android:id="@+id/userlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:background="#E6F0ED"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/credittext"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/betbutton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:onClick="enterBet"
+            android:background="@drawable/cardicon_foreground"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="배팅" />
+
+        <Button
+            android:id="@+id/btn_hit"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:onClick="hitClick"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="히트"
+            android:background="@drawable/cardicon_foreground"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_stand"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:onClick="holdClick"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="스탠드"
+            android:background="@drawable/cardicon_foreground"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_restart"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:onClick="restartClick"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="재시작"
+            android:textColor="#ED0C0C"
+            android:background="@drawable/cardicon_foreground"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bettext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

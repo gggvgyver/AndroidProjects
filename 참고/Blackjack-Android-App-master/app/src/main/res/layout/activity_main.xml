@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/greenfelt_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/cardHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCard"
+        app:layout_constraintVertical_bias="0.326">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/titleCard"
+        android:layout_width="196dp"
+        android:layout_height="222dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/blue_back" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Blackjack"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCard" />
+
+    <LinearLayout
+        android:id="@+id/buttonHolder"
+        android:layout_width="170dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCard">
+
+        <Button
+            android:id="@+id/newgameButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/transparent_bg_bordered_button"
+            android:fontFamily="@font/roboto"
+            android:padding="10dp"
+            android:text="New Game"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Space
+            android:id="@+id/s1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/hitmeButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="71dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:autoSizeTextType="none"
+            android:background="@drawable/transparent_bg_bordered_button"
+            android:fontFamily="@font/roboto"
+            android:padding="10dp"
+            android:text="Hit Me!"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Space
+            android:id="@+id/s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/holdButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/transparent_bg_bordered_button"
+            android:fontFamily="@font/roboto"
+            android:padding="10dp"
+            android:text="Hold"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Space
+            android:id="@+id/s3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/statsButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="62dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/transparent_bg_bordered_button"
+            android:fontFamily="@font/roboto"
+            android:padding="10dp"
+            android:text="Stats"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottomMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/dCardHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardHolder"
+        app:layout_constraintVertical_bias="0.702"></LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

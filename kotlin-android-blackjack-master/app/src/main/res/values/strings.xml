@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">블랙잭</string>
+    <string name="app_header">블랙잭</string>
+    <string name="button_start">시작</string>
+    <string name="button_hold">스탠드</string>
+    <string name="button_hit">히트</string>
+</resources>
